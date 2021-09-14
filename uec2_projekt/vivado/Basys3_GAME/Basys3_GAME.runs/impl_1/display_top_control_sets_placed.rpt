@@ -1,0 +1,125 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Sep 14 20:46:01 2021
+| Host         : DESKTOP-C647D4G running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file display_top_control_sets_placed.rpt
+| Design       : display_top
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    47 |
+|    Minimum number of control sets                        |    47 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   206 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    47 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     6 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |    11 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    18 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              84 |           41 |
+| No           | No                    | Yes                    |             387 |          121 |
+| No           | Yes                   | No                     |              70 |           18 |
+| Yes          | No                    | No                     |              35 |           10 |
+| Yes          | No                    | Yes                    |             421 |          166 |
+| Yes          | Yes                   | No                     |              37 |           18 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+|       Clock Signal      |                               Enable Signal                               |                           Set/Reset Signal                           | Slice Load Count | Bel Load Count |
++-------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_write_inst/uart_transmitter_inst/shift_reg[10]_i_1_n_0 | uart_ctl_inst/uart_write_inst/uart_transmitter_inst/load_reg_n_0     |                1 |              1 |
+|  clk_IBUF_BUFG          | controller/debouner_PS2CLK/Q_reg1                                         |                                                                      |                1 |              1 |
+|  clk_IBUF_BUFG          | controller/debouner_PS2DATA/Q_reg1                                        |                                                                      |                1 |              1 |
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_write_inst/uart_transmitter_inst/count[3]_i_2_n_0      | uart_ctl_inst/uart_write_inst/uart_transmitter_inst/count[3]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_read_inst/uart_receiver_inst/counter[3]_i_2_n_0        | uart_ctl_inst/uart_read_inst/uart_receiver_inst/counter              |                2 |              4 |
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_read_inst/uart_receiver_inst/bit_cnt                   |                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG          | controller/debouner_PS2CLK/nPS2C                                          |                                                                      |                1 |              4 |
+|  clk_IBUF_BUFG          | controller/debouner_PS2CLK/sel                                            | controller/debouner_PS2CLK/rst_counter                               |                1 |              4 |
+|  clk_IBUF_BUFG          | controller/debouner_PS2DATA/counter[3]_i_2__1_n_0                         | controller/debouner_PS2DATA/rst_counter                              |                1 |              4 |
+|  clk_IBUF_BUFG          | controller/flag_reg_n_0                                                   | controller/keycode                                                   |                2 |              8 |
+|  clk_IBUF_BUFG          |                                                                           | vga_timing_inst/h_count_reg_reg[7]_3                                 |                2 |              8 |
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_read_inst/uart_receiver_inst/shift_reg                 |                                                                      |                2 |              8 |
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_read_inst/uart_receiver_inst/counter                   |                                                                      |                1 |              8 |
+|  clk_IBUF_BUFG          | uart_ctl_inst/uart_write_inst/uart_transmitter_inst/shift_reg[10]_i_1_n_0 |                                                                      |                3 |              9 |
+|  ghost_top_inst/tick    |                                                                           | game_ctl_inst/reset                                                  |                4 |             10 |
+|  ghost_top_inst/tick    | yoshi_sprite_inst/E[0]                                                    | game_ctl_inst/reset                                                  |                3 |             10 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/s_x_next                                              | game_ctl_inst/reset                                                  |                3 |             10 |
+|  ghost_bottom_inst/tick |                                                                           | game_ctl_inst/reset                                                  |                4 |             10 |
+|  ghost_bottom_inst/tick | yoshi_sprite_inst/s_y_reg_reg[9]_2[0]                                     | game_ctl_inst/reset                                                  |                3 |             10 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/s_y_next                                                | game_ctl_inst/reset                                                  |                3 |             10 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/s_x_next                                                | game_ctl_inst/reset                                                  |                3 |             10 |
+|  clk_IBUF_BUFG          | vga_timing_inst/pixel_tick                                                | hard_reset_IBUF                                                      |                6 |             10 |
+|  clk_IBUF_BUFG          | vga_timing_inst/v_count_reg0                                              | hard_reset_IBUF                                                      |                4 |             10 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/s_y_next                                              | game_ctl_inst/reset                                                  |                3 |             10 |
+|  clk_IBUF_BUFG          |                                                                           | hard_reset_IBUF                                                      |                8 |             11 |
+|  clk_IBUF_BUFG          | vga_timing_inst/pixel_reg_reg[1]_1                                        | vga_timing_inst/rgb_reg                                              |               10 |             12 |
+|  clk_IBUF_BUFG          | egg_ctl_inst/score_reg0                                                   | game_ctl_inst/reset                                                  |                6 |             13 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/start_next_y                                            | game_ctl_inst/reset                                                  |                7 |             15 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/start_next_y                                          | game_ctl_inst/reset                                                  |                8 |             15 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/x_start_next                                            | game_ctl_inst/reset                                                  |               10 |             17 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/x_start_next                                          | game_ctl_inst/reset                                                  |                8 |             17 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/jump_t_next                                             | game_ctl_inst/reset                                                  |               10 |             20 |
+|  mad_ghost_inst/tick    |                                                                           | game_ctl_inst/reset                                                  |                8 |             20 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/x_time_next                                             | game_ctl_inst/reset                                                  |               11 |             20 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/jump_t_next                                           | game_ctl_inst/reset                                                  |               10 |             20 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/x_time_next                                           | game_ctl_inst/reset                                                  |               10 |             20 |
+|  clk_IBUF_BUFG          | egg_ctl_inst/E[0]                                                         | game_ctl_inst/reset                                                  |                9 |             21 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/walk_t_next                                           | game_ctl_inst/reset                                                  |                7 |             25 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/walk_t_next                                             | game_ctl_inst/reset                                                  |                6 |             25 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst/extra_up_next                                           | game_ctl_inst/reset                                                  |               10 |             26 |
+|  clk_IBUF_BUFG          | yoshi_sprite_inst_2/extra_up_next                                         | game_ctl_inst/reset                                                  |               10 |             26 |
+|  clk_IBUF_BUFG          | game_ctl_inst/timeout_next                                                | hard_reset_IBUF                                                      |                9 |             28 |
+|  clk_IBUF_BUFG          |                                                                           | uart_ctl_inst/uart_write_inst/tick_gen_inst/counter[31]_i_1_n_0      |                8 |             31 |
+|  clk_IBUF_BUFG          |                                                                           | uart_ctl_inst/uart_read_inst/baud_rate_gen_inst/counter[31]_i_1_n_0  |                8 |             31 |
+|  clk_IBUF_BUFG          | draw_score_inst/bcd_converter_inst/bcd_0_next                             | game_ctl_inst/reset                                                  |                7 |             33 |
+|  clk_IBUF_BUFG          |                                                                           |                                                                      |               41 |             84 |
+|  clk_IBUF_BUFG          |                                                                           | game_ctl_inst/reset                                                  |               97 |            336 |
++-------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,1187 @@
+
+*** Running vivado
+    with args -log display_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_top.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source display_top.tcl -notrace
+Command: synth_design -top display_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1480 
+WARNING: [Synth 8-6901] identifier 'waiting' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/egg_ctl.v:90]
+WARNING: [Synth 8-6901] identifier 'head_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:478]
+WARNING: [Synth 8-6901] identifier 'head_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:479]
+WARNING: [Synth 8-6901] identifier 'torso_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:480]
+WARNING: [Synth 8-6901] identifier 'torso_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:481]
+WARNING: [Synth 8-6901] identifier 'head_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:484]
+WARNING: [Synth 8-6901] identifier 'torso_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:485]
+WARNING: [Synth 8-6901] identifier 'head_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:477]
+WARNING: [Synth 8-6901] identifier 'head_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:478]
+WARNING: [Synth 8-6901] identifier 'torso_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:479]
+WARNING: [Synth 8-6901] identifier 'torso_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:480]
+WARNING: [Synth 8-6901] identifier 'head_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:483]
+WARNING: [Synth 8-6901] identifier 'torso_on' is used before its declaration [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:484]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 746.219 ; gain = 201.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'display_top' [C:/Users/hlznl/Desktop/GAME/rtl/module_top.v:2]
+	Parameter idle bound to: 3'b001 
+	Parameter gameover bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'vga_timing' [C:/Users/hlznl/Desktop/GAME/rtl/vga_timing.v:2]
+	Parameter H_DISPLAY bound to: 640 - type: integer 
+	Parameter H_L_BORDER bound to: 48 - type: integer 
+	Parameter H_R_BORDER bound to: 16 - type: integer 
+	Parameter H_RETRACE bound to: 96 - type: integer 
+	Parameter H_MAX bound to: 799 - type: integer 
+	Parameter START_H_RETRACE bound to: 656 - type: integer 
+	Parameter END_H_RETRACE bound to: 751 - type: integer 
+	Parameter V_DISPLAY bound to: 480 - type: integer 
+	Parameter V_T_BORDER bound to: 10 - type: integer 
+	Parameter V_B_BORDER bound to: 33 - type: integer 
+	Parameter V_RETRACE bound to: 2 - type: integer 
+	Parameter V_MAX bound to: 524 - type: integer 
+	Parameter START_V_RETRACE bound to: 513 - type: integer 
+	Parameter END_V_RETRACE bound to: 514 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing' (1#1) [C:/Users/hlznl/Desktop/GAME/rtl/vga_timing.v:2]
+INFO: [Synth 8-6157] synthesizing module 'uart_ctl' [C:/Users/hlznl/Desktop/GAME/rtl/uart_ctl.v:2]
+	Parameter baudrate bound to: 9600 - type: integer 
+	Parameter freq bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_read' [C:/Users/hlznl/Desktop/GAME/rtl/uart_read.v:3]
+	Parameter baudrate bound to: 9600 - type: integer 
+	Parameter freq bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'baud_rate_gen' [C:/Users/hlznl/Desktop/GAME/rtl/baud_rate_gen.v:3]
+	Parameter max bound to: 651 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'baud_rate_gen' (2#1) [C:/Users/hlznl/Desktop/GAME/rtl/baud_rate_gen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [C:/Users/hlznl/Desktop/GAME/rtl/uart_receiver.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (3#1) [C:/Users/hlznl/Desktop/GAME/rtl/uart_receiver.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_read' (4#1) [C:/Users/hlznl/Desktop/GAME/rtl/uart_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_write' [C:/Users/hlznl/Desktop/GAME/rtl/uart_write.v:3]
+	Parameter baudrate bound to: 9600 - type: integer 
+	Parameter freq bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [C:/Users/hlznl/Desktop/GAME/rtl/uart_transmitter.v:3]
+	Parameter s0 bound to: 0 - type: integer 
+	Parameter s1 bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (5#1) [C:/Users/hlznl/Desktop/GAME/rtl/uart_transmitter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tick_gen' [C:/Users/hlznl/Desktop/GAME/rtl/tick_gen.v:3]
+	Parameter max bound to: 10416 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tick_gen' (6#1) [C:/Users/hlznl/Desktop/GAME/rtl/tick_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_write' (7#1) [C:/Users/hlznl/Desktop/GAME/rtl/uart_write.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_ctl' (8#1) [C:/Users/hlznl/Desktop/GAME/rtl/uart_ctl.v:2]
+INFO: [Synth 8-638] synthesizing module 'PS2' [C:/Users/hlznl/Desktop/GAME/rtl/PS2.vhd:21]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/hlznl/Desktop/GAME/rtl/debouncer.vhd:13' bound to instance 'debouner_PS2CLK' of component 'debouncer' [C:/Users/hlznl/Desktop/GAME/rtl/PS2.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/hlznl/Desktop/GAME/rtl/debouncer.vhd:22]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (9#1) [C:/Users/hlznl/Desktop/GAME/rtl/debouncer.vhd:22]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/hlznl/Desktop/GAME/rtl/debouncer.vhd:13' bound to instance 'debouner_PS2DATA' of component 'debouncer' [C:/Users/hlznl/Desktop/GAME/rtl/PS2.vhd:47]
+INFO: [Synth 8-3491] module 'keycode_to_ascii' declared at 'C:/Users/hlznl/Desktop/GAME/rtl/keycode_to_ascii.vhd:11' bound to instance 'keycode_to_ascii_inst' of component 'keycode_to_ascii' [C:/Users/hlznl/Desktop/GAME/rtl/PS2.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'keycode_to_ascii' [C:/Users/hlznl/Desktop/GAME/rtl/keycode_to_ascii.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'keycode_to_ascii' (10#1) [C:/Users/hlznl/Desktop/GAME/rtl/keycode_to_ascii.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'PS2' (11#1) [C:/Users/hlznl/Desktop/GAME/rtl/PS2.vhd:21]
+INFO: [Synth 8-6157] synthesizing module 'yoshi_sprite' [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:3]
+	Parameter X_LOCATION bound to: 100 - type: integer 
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter MIN_Y bound to: 16 - type: integer 
+	Parameter T_W bound to: 16 - type: integer 
+	Parameter T_H bound to: 16 - type: integer 
+	Parameter X_MAX bound to: 25 - type: integer 
+	Parameter X_D bound to: 9 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter no_dir bound to: 2'b00 
+	Parameter left bound to: 2'b01 
+	Parameter right bound to: 2'b10 
+	Parameter TIME_START_X bound to: 800000 - type: integer 
+	Parameter TIME_STEP_X bound to: 6000 - type: integer 
+	Parameter TIME_MIN_X bound to: 500000 - type: integer 
+	Parameter standing bound to: 3'b000 
+	Parameter walking bound to: 3'b001 
+	Parameter jump_up bound to: 3'b010 
+	Parameter jump_extra bound to: 3'b011 
+	Parameter jump_down bound to: 3'b100 
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+	Parameter TILE_1_MAX bound to: 7000000 - type: integer 
+	Parameter TILE_2_MAX bound to: 14000000 - type: integer 
+	Parameter WALK_T_MAX bound to: 21000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:138]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:314]
+INFO: [Synth 8-6157] synthesizing module 'yoshi_mem' [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_mem.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'yoshi_mem' (12#1) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_mem.v:2]
+INFO: [Synth 8-6157] synthesizing module 'yoshi_soul_mem' [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_soul_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_soul_mem.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'yoshi_soul_mem' (13#1) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_soul_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'yoshi_sprite' (14#1) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:3]
+INFO: [Synth 8-6157] synthesizing module 'yoshi_sprite_2' [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:2]
+	Parameter X_LOCATION bound to: 200 - type: integer 
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter MIN_Y bound to: 16 - type: integer 
+	Parameter T_W bound to: 16 - type: integer 
+	Parameter T_H bound to: 16 - type: integer 
+	Parameter X_MAX bound to: 25 - type: integer 
+	Parameter X_D bound to: 9 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter no_dir bound to: 2'b00 
+	Parameter left bound to: 2'b01 
+	Parameter right bound to: 2'b10 
+	Parameter TIME_START_X bound to: 800000 - type: integer 
+	Parameter TIME_STEP_X bound to: 6000 - type: integer 
+	Parameter TIME_MIN_X bound to: 500000 - type: integer 
+	Parameter standing bound to: 3'b000 
+	Parameter walking bound to: 3'b001 
+	Parameter jump_up bound to: 3'b010 
+	Parameter jump_extra bound to: 3'b011 
+	Parameter jump_down bound to: 3'b100 
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+	Parameter TILE_1_MAX bound to: 7000000 - type: integer 
+	Parameter TILE_2_MAX bound to: 14000000 - type: integer 
+	Parameter WALK_T_MAX bound to: 21000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:137]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:313]
+INFO: [Synth 8-6157] synthesizing module 'yoshi_mem_2' [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_mem_2.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_mem_2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'yoshi_mem_2' (15#1) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_mem_2.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'yoshi_sprite_2' (16#1) [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mad_ghost' [C:/Users/hlznl/Desktop/GAME/rtl/mad_ghost.v:2]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 16 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter TIME_MAX bound to: 4000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mad_ghost_mem' [C:/Users/hlznl/Desktop/GAME/rtl/mad_ghost_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/mad_ghost_mem.v:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/hlznl/Desktop/GAME/rtl/mad_ghost_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mad_ghost_mem' (17#1) [C:/Users/hlznl/Desktop/GAME/rtl/mad_ghost_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mad_ghost' (18#1) [C:/Users/hlznl/Desktop/GAME/rtl/mad_ghost.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ghost_top' [C:/Users/hlznl/Desktop/GAME/rtl/ghost_top.v:3]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 16 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter TIME_MAX bound to: 4600000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'standard_ghost_mem' [C:/Users/hlznl/Desktop/GAME/rtl/standard_ghost_mem.v:3]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/standard_ghost_mem.v:14]
+INFO: [Synth 8-226] default block is never used [C:/Users/hlznl/Desktop/GAME/rtl/standard_ghost_mem.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'standard_ghost_mem' (19#1) [C:/Users/hlznl/Desktop/GAME/rtl/standard_ghost_mem.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ghost_top' (20#1) [C:/Users/hlznl/Desktop/GAME/rtl/ghost_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ghost_bottom' [C:/Users/hlznl/Desktop/GAME/rtl/ghost_bottom.v:3]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 16 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter TIME_MAX bound to: 4600000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ghost_bottom' (21#1) [C:/Users/hlznl/Desktop/GAME/rtl/ghost_bottom.v:3]
+INFO: [Synth 8-6157] synthesizing module 'floors' [C:/Users/hlznl/Desktop/GAME/rtl/floors.v:2]
+	Parameter offset bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wall_mem' [C:/Users/hlznl/Desktop/GAME/rtl/wall_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/wall_mem.v:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/hlznl/Desktop/GAME/rtl/wall_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'wall_mem' (22#1) [C:/Users/hlznl/Desktop/GAME/rtl/wall_mem.v:2]
+INFO: [Synth 8-6157] synthesizing module 'block_mem' [C:/Users/hlznl/Desktop/GAME/rtl/block_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/block_mem.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'block_mem' (23#1) [C:/Users/hlznl/Desktop/GAME/rtl/block_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'floors' (24#1) [C:/Users/hlznl/Desktop/GAME/rtl/floors.v:2]
+INFO: [Synth 8-6157] synthesizing module 'grounded' [C:/Users/hlznl/Desktop/GAME/rtl/grounded.v:2]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 16 - type: integer 
+	Parameter T_H bound to: 16 - type: integer 
+	Parameter X_MAX bound to: 25 - type: integer 
+	Parameter X_D bound to: 9 - type: integer 
+	Parameter LA bound to: 19 - type: integer 
+	Parameter LB bound to: 13 - type: integer 
+	Parameter RA bound to: 11 - type: integer 
+	Parameter RB bound to: 5 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'grounded' (25#1) [C:/Users/hlznl/Desktop/GAME/rtl/grounded.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ghost_background_mem' [C:/Users/hlznl/Desktop/GAME/rtl/ghost_background_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/ghost_background_mem.v:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/hlznl/Desktop/GAME/rtl/ghost_background_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ghost_background_mem' (26#1) [C:/Users/hlznl/Desktop/GAME/rtl/ghost_background_mem.v:2]
+INFO: [Synth 8-6157] synthesizing module 'collision_ctl' [C:/Users/hlznl/Desktop/GAME/rtl/collision_ctl.v:2]
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'collision_ctl' (27#1) [C:/Users/hlznl/Desktop/GAME/rtl/collision_ctl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'egg_ctl' [C:/Users/hlznl/Desktop/GAME/rtl/egg_ctl.v:2]
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter waiting bound to: 1'b0 
+	Parameter respawn bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hlznl/Desktop/GAME/rtl/egg_ctl.v:121]
+INFO: [Synth 8-6157] synthesizing module 'egg_mem' [C:/Users/hlznl/Desktop/GAME/rtl/egg_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/egg_mem.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'egg_mem' (28#1) [C:/Users/hlznl/Desktop/GAME/rtl/egg_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'egg_ctl' (29#1) [C:/Users/hlznl/Desktop/GAME/rtl/egg_ctl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'draw_score' [C:/Users/hlznl/Desktop/GAME/rtl/draw_score.v:2]
+INFO: [Synth 8-6157] synthesizing module 'bcd_converter' [C:/Users/hlznl/Desktop/GAME/rtl/bcd_converter.v:2]
+	Parameter idle bound to: 1'b0 
+	Parameter convert bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'bcd_converter' (30#1) [C:/Users/hlznl/Desktop/GAME/rtl/bcd_converter.v:2]
+INFO: [Synth 8-6157] synthesizing module 'numbers_mem' [C:/Users/hlznl/Desktop/GAME/rtl/numbers_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/numbers_mem.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'numbers_mem' (31#1) [C:/Users/hlznl/Desktop/GAME/rtl/numbers_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'draw_score' (32#1) [C:/Users/hlznl/Desktop/GAME/rtl/draw_score.v:2]
+INFO: [Synth 8-6157] synthesizing module 'draw_health' [C:/Users/hlznl/Desktop/GAME/rtl/draw_health.v:2]
+INFO: [Synth 8-6157] synthesizing module 'heart_mem' [C:/Users/hlznl/Desktop/GAME/rtl/heart_mem.v:2]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/heart_mem.v:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/hlznl/Desktop/GAME/rtl/heart_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'heart_mem' (33#1) [C:/Users/hlznl/Desktop/GAME/rtl/heart_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'draw_health' (34#1) [C:/Users/hlznl/Desktop/GAME/rtl/draw_health.v:2]
+INFO: [Synth 8-6157] synthesizing module 'game_ctl' [C:/Users/hlznl/Desktop/GAME/rtl/game_ctl.v:2]
+	Parameter init bound to: 3'b000 
+	Parameter idle bound to: 3'b001 
+	Parameter playing bound to: 3'b010 
+	Parameter hit bound to: 3'b011 
+	Parameter gameover bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hlznl/Desktop/GAME/rtl/game_ctl.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'game_ctl' (35#1) [C:/Users/hlznl/Desktop/GAME/rtl/game_ctl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'draw_end' [C:/Users/hlznl/Desktop/GAME/rtl/draw_end.v:3]
+INFO: [Synth 8-6157] synthesizing module 'end_mem' [C:/Users/hlznl/Desktop/GAME/rtl/end_mem.v:3]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/hlznl/Desktop/GAME/rtl/end_mem.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'end_mem' (36#1) [C:/Users/hlznl/Desktop/GAME/rtl/end_mem.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'draw_end' (37#1) [C:/Users/hlznl/Desktop/GAME/rtl/draw_end.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'display_top' (38#1) [C:/Users/hlznl/Desktop/GAME/rtl/module_top.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1001.789 ; gain = 457.336
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 1005.918 ; gain = 461.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:59 ; elapsed = 00:01:05 . Memory (MB): peak = 1005.918 ; gain = 461.465
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/hlznl/Desktop/GAME/vivado/Basys3_GAME/Basys3_GAME.srcs/constrs_1/imports/source/module_top.xdc]
+Finished Parsing XDC File [C:/Users/hlznl/Desktop/GAME/vivado/Basys3_GAME/Basys3_GAME.srcs/constrs_1/imports/source/module_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/hlznl/Desktop/GAME/vivado/Basys3_GAME/Basys3_GAME.srcs/constrs_1/imports/source/module_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/display_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1052.344 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1052.344 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 1052.344 ; gain = 507.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 1052.344 ; gain = 507.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 1052.344 ; gain = 507.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:138]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite.v:314]
+INFO: [Synth 8-802] inferred FSM for state register 'x_state_reg_reg' in module 'yoshi_sprite'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_y_reg' in module 'yoshi_sprite'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:137]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/hlznl/Desktop/GAME/rtl/yoshi_sprite_2.v:313]
+INFO: [Synth 8-802] inferred FSM for state register 'x_state_reg_reg' in module 'yoshi_sprite_2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_y_reg' in module 'yoshi_sprite_2'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/hlznl/Desktop/GAME/rtl/ghost_top.v:113]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/hlznl/Desktop/GAME/rtl/ghost_bottom.v:111]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'egg_ctl'
+INFO: [Synth 8-5544] ROM "sseg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "an" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'game_state_reg_reg' in module 'game_ctl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                standing |                              000 |                              000
+                 walking |                              001 |                              001
+                 jump_up |                              010 |                              010
+              jump_extra |                              011 |                              011
+               jump_down |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_y_reg' using encoding 'sequential' in module 'yoshi_sprite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  no_dir |                               00 |                               00
+                   right |                               01 |                               10
+                    left |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'x_state_reg_reg' using encoding 'sequential' in module 'yoshi_sprite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                standing |                              000 |                              000
+                 walking |                              001 |                              001
+                 jump_up |                              010 |                              010
+              jump_extra |                              011 |                              011
+               jump_down |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_y_reg' using encoding 'sequential' in module 'yoshi_sprite_2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  no_dir |                               00 |                               00
+                   right |                               01 |                               10
+                    left |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'x_state_reg_reg' using encoding 'sequential' in module 'yoshi_sprite_2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 waiting |                                0 |                               00
+                 respawn |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'egg_ctl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                              000 |                              000
+                    idle |                              001 |                              001
+                 playing |                              010 |                              010
+                gameover |                              011 |                              100
+                     hit |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'game_state_reg_reg' using encoding 'sequential' in module 'game_ctl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 01:20:37 ; elapsed = 01:24:51 . Memory (MB): peak = 1052.344 ; gain = 507.891
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     28 Bit       Adders := 3     
+	   2 Input     26 Bit       Adders := 7     
+	   2 Input     25 Bit       Adders := 2     
+	   2 Input     20 Bit       Adders := 12    
+	   2 Input     14 Bit       Adders := 5     
+	   3 Input     12 Bit       Adders := 11    
+	   2 Input     11 Bit       Adders := 40    
+	   2 Input     10 Bit       Adders := 21    
+	   2 Input      8 Bit       Adders := 2     
+	   4 Input      7 Bit       Adders := 3     
+	   3 Input      7 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 6     
+	   4 Input      5 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 15    
+	   3 Input      4 Bit       Adders := 8     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               28 Bit    Registers := 3     
+	               26 Bit    Registers := 5     
+	               25 Bit    Registers := 2     
+	               20 Bit    Registers := 8     
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 8     
+	               10 Bit    Registers := 25    
+	                9 Bit    Registers := 5     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 30    
++---ROMs : 
+	                              ROMs := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     28 Bit        Muxes := 4     
+	   5 Input     28 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 5     
+	   5 Input     26 Bit        Muxes := 2     
+	   2 Input     25 Bit        Muxes := 2     
+	   5 Input     25 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 44    
+	   5 Input     20 Bit        Muxes := 4     
+	   3 Input     20 Bit        Muxes := 4     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 24    
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 15    
+	   7 Input      9 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 4     
+	   4 Input      7 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 2     
+	   5 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 18    
+	  11 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	 512 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 10    
+	   5 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 150   
+	   5 Input      1 Bit        Muxes := 20    
+	   3 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module display_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module vga_timing 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module baud_rate_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module uart_receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+Module uart_transmitter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 10    
+Module tick_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
+Module PS2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  13 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module yoshi_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module yoshi_soul_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module yoshi_sprite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 7     
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input      7 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               20 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 1     
+	   5 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   5 Input     25 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 22    
+	   5 Input     20 Bit        Muxes := 2     
+	   3 Input     20 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 5     
+Module yoshi_mem_2 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module yoshi_sprite_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 2     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 7     
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input      7 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               20 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 1     
+	   5 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   5 Input     25 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 22    
+	   5 Input     20 Bit        Muxes := 2     
+	   3 Input     20 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 5     
+Module mad_ghost_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module mad_ghost 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 4     
+	   4 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module standard_ghost_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module ghost_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ghost_bottom 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module wall_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module block_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module floors 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 20    
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+Module grounded 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module ghost_background_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module collision_ctl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 11    
++---Muxes : 
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module egg_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module egg_ctl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 5     
+	   3 Input     12 Bit       Adders := 5     
+	   2 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 2     
+	   4 Input      7 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 7     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+	   7 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 1     
+Module bcd_converter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module numbers_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module draw_score 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module heart_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	 512 Input      4 Bit        Muxes := 1     
+Module draw_health 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+Module game_ctl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input     28 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 6     
+Module end_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module draw_end 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (egg_ctl_inst/\D_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (controller/\data_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (egg_ctl_inst/\egg_y_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (draw_score_inst/\bcd_converter_inst/input_reg_reg[0] )
+INFO: [Synth 8-3886] merging instance 'egg_ctl_inst/egg_type_reg_reg[0]' (FDCE) to 'egg_ctl_inst/egg_x_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'egg_ctl_inst/egg_type_reg_reg[2]' (FDCE) to 'egg_ctl_inst/egg_x_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'egg_ctl_inst/egg_type_reg_reg[4]' (FDCE) to 'egg_ctl_inst/egg_x_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'egg_ctl_inst/egg_type_reg_reg[1]' (FDCE) to 'egg_ctl_inst/egg_x_reg_reg[1]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 02:53:03 ; elapsed = 03:01:36 . Memory (MB): peak = 1052.344 ; gain = 507.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+----------------------------------+---------------+----------------+
+|Module Name      | RTL Object                       | Depth x Width | Implemented As | 
++-----------------+----------------------------------+---------------+----------------+
+|keycode_to_ascii | ascii_code                       | 256x7         | LUT            | 
+|PS2              | keycode_to_ascii_inst/ascii_code | 256x7         | Block RAM      | 
+|yoshi_sprite     | sel_rep                          | 2048x9        | Block RAM      | 
+|yoshi_sprite     | sel                              | 2048x8        | Block RAM      | 
+|yoshi_sprite_2   | sel_rep                          | 2048x11       | Block RAM      | 
+|yoshi_sprite_2   | sel                              | 2048x8        | Block RAM      | 
+|mad_ghost        | sel                              | 512x8         | Block RAM      | 
+|ghost_top        | sel                              | 512x8         | Block RAM      | 
+|ghost_bottom     | sel                              | 512x8         | Block RAM      | 
+|floors           | sel                              | 2048x12       | Block RAM      | 
+|floors           | sel                              | 512x8         | Block RAM      | 
+|egg_ctl          | sel                              | 2048x12       | Block RAM      | 
+|draw_score       | sel                              | 4096x1        | Block RAM      | 
+|draw_end         | sel                              | 2048x6        | Block RAM      | 
+|display_top      | sel                              | 65536x9       | Block RAM      | 
++-----------------+----------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance controller/data0/i_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst/i_0/sel_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst/i_1/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst_2/i_0/sel_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst_2/i_1/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mad_ghost_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance ghost_top_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance ghost_bottom_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance floors_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance floors_inst/i_1/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance egg_ctl_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance draw_score_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance draw_end_inst/i_0/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/sel_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 02:53:22 ; elapsed = 03:01:55 . Memory (MB): peak = 1052.344 ; gain = 507.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 02:53:36 ; elapsed = 03:02:10 . Memory (MB): peak = 1130.148 ; gain = 585.695
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst/sel_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance yoshi_sprite_inst_2/sel_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mad_ghost_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance ghost_top_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance ghost_top_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance floors_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance floors_inst/sel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance egg_ctl_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance draw_score_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance draw_end_inst/sel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance sel_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 02:53:43 ; elapsed = 03:02:17 . Memory (MB): peak = 1171.250 ; gain = 626.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 02:53:48 ; elapsed = 03:02:23 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 02:53:48 ; elapsed = 03:02:23 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 02:53:50 ; elapsed = 03:02:24 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 02:53:50 ; elapsed = 03:02:24 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 02:53:50 ; elapsed = 03:02:25 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 02:53:50 ; elapsed = 03:02:25 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |CARRY4      |   477|
+|3     |LUT1        |   325|
+|4     |LUT2        |   512|
+|5     |LUT3        |   362|
+|6     |LUT4        |   974|
+|7     |LUT5        |   533|
+|8     |LUT6        |  1027|
+|9     |MUXF7       |     3|
+|10    |RAMB18E1_1  |     1|
+|11    |RAMB18E1_2  |     1|
+|12    |RAMB18E1_3  |     1|
+|13    |RAMB18E1_4  |     1|
+|14    |RAMB18E1_5  |     1|
+|15    |RAMB18E1_6  |     1|
+|16    |RAMB18E1_7  |     1|
+|17    |RAMB18E1_8  |     1|
+|18    |RAMB36E1    |     1|
+|19    |RAMB36E1_1  |     1|
+|20    |RAMB36E1_10 |     1|
+|21    |RAMB36E1_11 |     1|
+|22    |RAMB36E1_12 |     1|
+|23    |RAMB36E1_13 |     1|
+|24    |RAMB36E1_14 |     1|
+|25    |RAMB36E1_15 |     1|
+|26    |RAMB36E1_16 |     1|
+|27    |RAMB36E1_17 |     1|
+|28    |RAMB36E1_18 |     1|
+|29    |RAMB36E1_2  |     1|
+|30    |RAMB36E1_3  |     3|
+|31    |RAMB36E1_4  |     1|
+|32    |RAMB36E1_5  |     1|
+|33    |RAMB36E1_6  |     1|
+|34    |RAMB36E1_7  |     1|
+|35    |RAMB36E1_8  |     1|
+|36    |RAMB36E1_9  |     1|
+|37    |FDCE        |   735|
+|38    |FDPE        |    73|
+|39    |FDRE        |   215|
+|40    |FDSE        |     9|
+|41    |IBUF        |     5|
+|42    |OBUF        |    27|
++------+------------+------+
+
+Report Instance Areas: 
++------+----------------------------+-----------------+------+
+|      |Instance                    |Module           |Cells |
++------+----------------------------+-----------------+------+
+|1     |top                         |                 |  5307|
+|2     |  draw_end_inst             |draw_end         |     2|
+|3     |  controller                |PS2              |    91|
+|4     |    debouner_PS2CLK         |debouncer        |    18|
+|5     |    debouner_PS2DATA        |debouncer_1      |    21|
+|6     |  draw_health_inst          |draw_health      |    34|
+|7     |    heart_mem_inst          |heart_mem        |    34|
+|8     |  draw_score_inst           |draw_score       |   119|
+|9     |    bcd_converter_inst      |bcd_converter    |    80|
+|10    |  egg_ctl_inst              |egg_ctl          |   493|
+|11    |  floors_inst               |floors           |    20|
+|12    |  game_ctl_inst             |game_ctl         |   125|
+|13    |  ghost_bottom_inst         |ghost_bottom     |   405|
+|14    |  ghost_top_inst            |ghost_top        |   412|
+|15    |  grounded_inst_1           |grounded         |     2|
+|16    |  grounded_inst_2           |grounded_0       |     2|
+|17    |  mad_ghost_inst            |mad_ghost        |   416|
+|18    |  uart_ctl_inst             |uart_ctl         |   187|
+|19    |    uart_read_inst          |uart_read        |    99|
+|20    |      baud_rate_gen_inst    |baud_rate_gen    |    51|
+|21    |      uart_receiver_inst    |uart_receiver    |    48|
+|22    |    uart_write_inst         |uart_write       |    88|
+|23    |      tick_gen_inst         |tick_gen         |    51|
+|24    |      uart_transmitter_inst |uart_transmitter |    37|
+|25    |  vga_timing_inst           |vga_timing       |   430|
+|26    |  yoshi_sprite_inst         |yoshi_sprite     |  1343|
+|27    |  yoshi_sprite_inst_2       |yoshi_sprite_2   |  1157|
++------+----------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 02:53:50 ; elapsed = 03:02:25 . Memory (MB): peak = 1176.008 ; gain = 631.555
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 02:52:43 ; elapsed = 03:02:15 . Memory (MB): peak = 1176.008 ; gain = 585.129
+Synthesis Optimization Complete : Time (s): cpu = 02:53:50 ; elapsed = 03:02:25 . Memory (MB): peak = 1176.008 ; gain = 631.555
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 509 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1185.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+185 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 02:54:03 ; elapsed = 03:02:40 . Memory (MB): peak = 1185.316 ; gain = 886.777
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1185.316 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hlznl/Desktop/GAME/vivado/Basys3_GAME/Basys3_GAME.runs/synth_1/display_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file display_top_utilization_synth.rpt -pb display_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 14 20:43:51 2021...
